@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post ( '/vueusers', 'PagesController@storeUser' );
+Route::get ( '/vueusers', 'PagesController@readUsers' );
+Route::post ( '/vueusers/{id}', 'PagesController@deleteUser' );
+Route::post ( '/editusers/{id}', 'PagesController@editUser' );
