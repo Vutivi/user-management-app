@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post ( '/vueusers', 'PagesController@storeUser' );
-Route::get ( '/vueusers', 'PagesController@readUsers' );
-Route::post ( '/vueusers/{id}', 'PagesController@deleteUser' );
-Route::post ( '/editusers/{id}', 'PagesController@editUser' );
+Route::post ( '/vueusers', 'HomeController@storeUser' );
+Route::get ( '/vueusers', 'HomeController@readUsers' );
+Route::post ( '/vueusers/{id}', 'HomeController@deleteUser' );
+Route::post ( '/editusers/{id}', 'HomeController@editUser' );

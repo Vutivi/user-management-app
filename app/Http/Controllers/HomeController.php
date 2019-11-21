@@ -1,12 +1,13 @@
 <?php
 namespace App\Http\Controllers;
+use App\User;
 use Illuminate\Http\Request;
-use App\Data;
-class MainController extends Controller {
+
+class HomeController extends Controller {
 	public function storeUser(Request $request) {
 		$validatedData = $request->validate([
             'first_name' => 'required',
-            'last_name' => 'required',
+            'surname' => 'required',
             'username' => 'required',
             'email' => 'required',
             'password' => 'required',
@@ -15,7 +16,7 @@ class MainController extends Controller {
 
           $user = User::create([
             'first_name' => $validatedData['first_name'],
-            'last_name' => $validatedData['last_name'],
+            'surname' => $validatedData['surname'],
             'username' => $validatedData['username'],
             'email' => $validatedData['email'],
             'password' => $validatedData['password'],
@@ -36,9 +37,9 @@ class MainController extends Controller {
 	public function editUser(Request $request, $id){
 		$user               = User::where('id', $id)->first();
 		$user->first_name   = $request->get('first_name');
-		$user->last_name    = $request->get('last_name');
-        $user->username     = $request->get('username');
-        $user->email        = $request->get('email');
+    $user->surname      = $request->get('surname');
+    $user->email        = $request->get('email');
+    $user->username     = $request->get('username');
 		$user->password     = $request->get('password');
 		$user->save();
 		return $user;
