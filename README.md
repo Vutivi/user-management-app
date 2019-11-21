@@ -12,5 +12,5 @@
 <li>Run <pre>php artisan serve</pre> </li>
 </ul>
 
-## Working Demo
-You can see the demo of the project <a href="https://user-management-dotsure.herokuapp.com/">here</a>
+<!-- ## Working Demo
+You can see the demo of the project <a href="https://user-management-dotsure.herokuapp.com/">here</a> -->
