@@ -13,4 +13,4 @@
 </ul>
 
 ## Working Demo
-You can see the demo of the project <a href="http://demos.justlaravel.com/vue-js-crud-laravel/">here</a>
+You can see the demo of the project <a href="https://user-management-dotsure.herokuapp.com/">here</a>
